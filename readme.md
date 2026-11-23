@@ -19,3 +19,14 @@
 -git add . (ou backend/ frontend/ readme.md)
 -git commit -m ""
 -git push -u origin
+
+## MON PROJET :
+
+Une roulette aleatoire qui donne un plat avec la recette.
+(entrée, plat, dessert)
+
+l'entrée, plat, dessert seront des catégories cliquable.
+
+exemple: je coche la case plat, la roue tourne et me donne un plat et sa recette.
+
+![Aperçu du projet](frontend/public/wireframe.png)
