@@ -30,3 +30,18 @@ l'entrée, plat, dessert seront des catégories cliquable.
 exemple: je coche la case plat, la roue tourne et me donne un plat et sa recette.
 
 ![Aperçu du projet](frontend/public/wireframe.png)
+
+**Premier wireframes/schéma de mon projet**
+
+Mon projet est accepté sans roulette, donc je suis venu faire quelque chose de plus sobre:
+
+    -Un bouton par catégories.
+    -Une carte de présentation en une photo, titre du repas et une petite description.
+    -Carte cliquable qui nous amène sur la recette.
+        -Un bouton pour revenir sur la home page.
+
+![Aperçu du projet](frontend/public/wireframes.png)
+
+Je profite de faire une maquette de la home page et y mettre les éléments de couleurs, de typographie et de valeurs.
+
+![Aperçu du projet](frontend/public/maquette.png)
