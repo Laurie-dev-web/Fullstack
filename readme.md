@@ -45,3 +45,8 @@ Mon projet est accepté sans roulette, donc je suis venu faire quelque chose de 
 Je profite de faire une maquette de la home page et y mettre les éléments de couleurs, de typographie et de valeurs.
 
 ![Aperçu du projet](frontend/public/maquette.png)
+
+## initialisation de ma BDD
+
+SQLelectron
+creation database et d'une table.

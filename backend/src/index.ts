@@ -7,7 +7,7 @@ const PORT = process.env.API_PORT;
 const app = express();
 app.use(cors());
 
-app.get("/pokemon", (req, res) => {
+app.get("/", (req, res) => {
   res.json([
     {
       id: 1,
