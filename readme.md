@@ -50,3 +50,24 @@ Je profite de faire une maquette de la home page et y mettre les éléments de c
 
 SQLelectron
 creation database et d'une table.
+
+`create table log (
+id integer not null generated always as identity primary key,
+title TEXT not null,
+video_game TEXT not null,
+type_plat TEXT not null, 
+);`
+
+`insert into log(title, video_game, type_plat) VALUES ('Gateau au chocolat','Portal','Dessert');`
+
+## lier le backend a la BDD
+
+Ne pas oublier de faire une branche dev.
+
+->npm i pg (librairie => package)
+
+->npm i --save...ect
+
+index.ts importer la BDD
+
+##
