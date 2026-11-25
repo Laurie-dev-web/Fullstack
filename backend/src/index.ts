@@ -16,8 +16,9 @@ const db = new Pool({
   database: process.env.PG_DATABASE,
 });
 
-app.get("/", (req, res) => {
-  res.json(["miam miam!"]);
+app.get("/Logs", async (req, res) => {
+  const { rows } = await db.query("SELECT * FROM log");
+  res.json(rows);
 });
 
 app.listen(PORT, () => {

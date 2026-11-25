@@ -70,4 +70,29 @@ Ne pas oublier de faire une branche dev.
 
 index.ts importer la BDD
 
-##
+## Ajouter de la donnée dans ma BDD
+
+(fait avec claude)
+
+````ALTER TABLE log
+ADD COLUMN description TEXT,
+ADD COLUMN portions_par_personne SMALLINT;```
+
+
+```UPDATE log
+SET description = 'Le fameux gâteau Forêt-Noire garni de crème chantilly, de copeaux de chocolat et de cerises confites (« The cake is a lie »).',
+portions_par_personne = 1
+WHERE title = 'Gateau au chocolat' AND video_game = 'Portal';```
+
+INSERT INTO log (title, video_game, type_plat, description, portions_par_personne) VALUES
+````
+
+les valeurs fictifs sur les plats était trop bas alors j'ai utiliser un dé pour choisir entre 2 et 6.
+
+```
+UPDATE log
+SET portions_par_personne = floor(random() * 6 + 2)::SMALLINT
+WHERE type_plat = 'Plats';
+```
+
+## frontend appel ma bdd
