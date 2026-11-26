@@ -10,13 +10,14 @@ type Recette = {
 };
 
 export default function HomePage() {
-  const [recettes, setrecettes] = useState<Recette[]>([]);
+  const [recettes, setrecette] = useState<Recette[]>([]);
 
   useEffect(() => {
     async function fetchData() {
       const rawData = await fetch("http://localhost:3000/recettes");
+      console.log(rawData);
       const cleanData = (await rawData.json()) as Recette[];
-      setrecettes(cleanData);
+      setrecette(cleanData);
     }
     fetchData();
   }, []);
