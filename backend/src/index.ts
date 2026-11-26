@@ -16,9 +16,17 @@ const db = new Pool({
   database: process.env.PG_DATABASE,
 });
 
-app.get("/Logs", async (req, res) => {
-  const { rows } = await db.query("SELECT * FROM log");
+app.get("/Recettes", async (req, res) => {
+  const { rows } = await db.query("SELECT * FROM recette");
   res.json(rows);
+});
+
+app.get("/Recettes/:id", async (req, res) => {
+  const { rows } = await db.query(
+    "SELECT id, title, video_game, type_plat, description,portin_par_personne FROM recette WHERE id=$1",
+    [Number(req.params.id)],
+  );
+  res.json(rows[0]);
 });
 
 app.listen(PORT, () => {

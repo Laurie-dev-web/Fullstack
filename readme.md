@@ -96,3 +96,32 @@ WHERE type_plat = 'Plats';
 ```
 
 ## frontend appel ma bdd
+
+## [backend] une nouvelle route GET/recettes/:id
+
+J'ai modifier le nom de mon log = recette
+
+## [frontend]
+
+    -react-router
+    -main.tsx: BrowserRouter
+    -App.tsx: Routes
+
+Dans React, key est une prop spéciale réservée qui permet d'identifier de manière unique chaque élément d'une liste, tandis que toutes les autres props classiques (comme className, id, ou des attributs data-\*) sont transmises normalement à la balise HTML <article>.
+
+    Donc ici ma difficulté est que je n'avais pas encore compris que la key devait ce mettre dans mon <article>, parce dans mon erreurde l'inspecteur il disait que chaque enfant devait recevoir une key unique. et mon deuxieme point était que j'avais une return après l'opérateur de la fonction fléchée.
+
+```
+  return (
+    <>
+      <h1>pixel&poêle</h1>
+      {recettes.map((recette) => (
+        <article key={recette.id}>
+          <h2>{recette.title}</h2>
+          <p>{recette.video_game}</p>
+          <p>{recette.description}</p>
+        </article>
+      ))}
+    </>
+  );
+```
