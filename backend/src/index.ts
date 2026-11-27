@@ -23,7 +23,7 @@ app.get("/Recettes", async (req, res) => {
 
 app.get("/Recettes/:id", async (req, res) => {
   const { rows } = await db.query(
-    "SELECT id, title, video_game, type_plat, description,portin_par_personne FROM recette WHERE id=$1",
+    "SELECT id, title, video_game, type_plat, description, portions_par_personne FROM recette WHERE id=$1",
     [Number(req.params.id)],
   );
   res.json(rows[0]);

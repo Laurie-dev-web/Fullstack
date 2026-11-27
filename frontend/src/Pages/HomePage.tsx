@@ -1,23 +1,15 @@
 import { useEffect, useState } from "react";
-
-type Recette = {
-  id: number;
-  title: string;
-  video_game: string;
-  type_plat: string;
-  description: string;
-  portion_par_personne: number;
-};
+import { Link } from "react-router";
+import type { Recette } from "../types/Recettes";
 
 export default function HomePage() {
-  const [recettes, setrecette] = useState<Recette[]>([]);
+  const [recettes, setrecettes] = useState<Recette[]>([]);
 
   useEffect(() => {
     async function fetchData() {
-      const rawData = await fetch("http://localhost:3000/recettes");
-      console.log(rawData);
+      const rawData = await fetch("http://localhost:3000/Recettes");
       const cleanData = (await rawData.json()) as Recette[];
-      setrecette(cleanData);
+      setrecettes(cleanData);
     }
     fetchData();
   }, []);
@@ -27,9 +19,11 @@ export default function HomePage() {
       <h1>pixel&poêle</h1>
       {recettes.map((recette) => (
         <article key={recette.id}>
-          <h2>{recette.title}</h2>
-          <p>{recette.video_game}</p>
-          <p>{recette.description}</p>
+          <Link to={`/${recette.id}`}>
+            <p>{recette.title}</p>
+            <p>{recette.video_game}</p>
+            <p>{recette.description}</p>
+          </Link>
         </article>
       ))}
     </>
