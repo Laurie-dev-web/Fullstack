@@ -129,3 +129,7 @@ Dans React, key est une prop spéciale réservée qui permet d'identifier de man
 **lien dynamique Home->Log**
 
 J'ai eu une erreur coté backend sur l'inspecteur du navigateur, et j'ai pris pas mal de temps a comprendre que c'était le fait que j'avais mis des guillemets au lieu de backtick dans URL de mon LogPage.tsx.
+
+**Header omnipresent avec lien ->Home**
+
+Création d'un composant Header qui return vers la HomePage.
