@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import type { Recette } from "../types/Recettes";
-
+import "./HomePage.css";
 export default function HomePage() {
   const [recettes, setrecettes] = useState<Recette[]>([]);
 
@@ -15,17 +15,17 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
-      <h1>pixel&poêle</h1>
+    <section className="container">
+      <h1 className="title">pixel&poêle</h1>
       {recettes.map((recette) => (
-        <article key={recette.id}>
+        <article key={recette.id} className="article">
           <Link to={`/${recette.id}`}>
             <p>{recette.title}</p>
             <p>{recette.video_game}</p>
-            <p>{recette.description}</p>
+            <p>{recette.portions_par_personne}</p>
           </Link>
         </article>
       ))}
-    </>
+    </section>
   );
 }

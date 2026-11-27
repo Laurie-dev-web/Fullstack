@@ -1,0 +1,19 @@
+.container {
+  background: rgb(237, 237, 245);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  background-color: bisque;
+  width: 100%;
+  text-align: space-between;
+  padding: 4rem;
+  grid-column: 1 / -1;
+}
+
+.article {
+  margin: 1em;
+  margin-top: 2rem;
+}

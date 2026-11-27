@@ -4,5 +4,5 @@ export type Recette = {
   video_game: string;
   type_plat: string;
   description: string;
-  portion_par_personne: number;
+  portions_par_personne: number;
 };

@@ -139,3 +139,5 @@ Création d'un composant Header qui return vers la HomePage.
 copier coller de mon app.get(:id)
 -on change get par delete.
 -on retire get et ces valeurs et on met DELETE au lieu de SELECT.
+
+-ajout du bouton supprimer.
